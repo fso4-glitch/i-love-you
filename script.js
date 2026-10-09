@@ -35,8 +35,8 @@ function petal(){
 function setStep(index){
   step=index;
   chapters.forEach(function(chapter,i){chapter.classList.toggle('active',i===index)});
-  progressLabel.textContent='Capítulo '+(index+1)+' de 4';
-  progressBar.style.width=((index+1)/4*100)+'%';
+  progressLabel.textContent='Capítulo '+(index+1)+' de '+chapters.length;
+  progressBar.style.width=((index+1)/chapters.length*100)+'%';
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function unlockNext(chapterIndex,selector,activeClass){
@@ -50,6 +50,8 @@ function unlockNext(chapterIndex,selector,activeClass){
         const next=chapters[chapterIndex].querySelector('.next-button');
         next.disabled=false;
         next.classList.remove('locked');
+        const holdText=next.querySelector('.hold-text');
+        if(holdText)holdText.textContent='Segure pra abrir minha carta ♡';
       }
     };
   });
@@ -91,9 +93,11 @@ document.querySelectorAll('.next-button:not(.final-trigger)').forEach(function(b
 unlockNext(0,'.secret-note','revealed');
 unlockNext(1,'.detail-item','revealed');
 unlockNext(2,'.certainties button','opened');
+unlockNext(4,'.dream-capsule','opened');
 
 const holdButton=document.querySelector('.hold-button');
 function startHold(event){
+  if(holdButton.disabled)return;
   event.preventDefault();
   holdButton.classList.add('holding');
   holdTimer=setTimeout(openFinalScene,1750);
