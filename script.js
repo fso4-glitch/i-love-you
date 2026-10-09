@@ -118,7 +118,7 @@ function openFinalScene(){
   clearTimeout(holdTimer);
   holdTimer=null;
   holdButton.classList.remove('holding');
-  chapters[3].classList.remove('active');
+  chapters.forEach(function(chapter){chapter.classList.remove('active')});
   document.querySelector('.progress-nav').style.display='none';
   letterScene.classList.add('show');
   burst(36,holdButton);
