@@ -242,3 +242,57 @@ blockquote{
   .letter{border-radius:20px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Interações da história */
+.secret-notes{
+  position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  max-width:680px;margin:28px auto 0;
+}
+.secret-note,.detail-item{
+  border:1px solid #efa3b5;border-radius:22px;color:#7d4353;cursor:pointer;
+  background:linear-gradient(145deg,#fff,#ffedf3);box-shadow:0 8px 20px #c64d701c;
+  transition:transform .3s,background .3s,border-color .3s;
+}
+.secret-note{
+  min-height:132px;padding:17px 13px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:7px;
+}
+.secret-note>span{font-size:1.75rem;color:#e24e76}
+.secret-note b{font-family:"Cormorant Garamond",serif;font-size:1.1rem}
+.secret-note small{display:none;font-size:.75rem;line-height:1.45;color:#784653}
+.secret-note.revealed{background:#ffe0e9;border-color:#ef6588;transform:translateY(-5px)}
+.secret-note.revealed b{display:none}
+.secret-note.revealed small{display:block;animation:enter .5s ease}
+.detail-item{
+  min-height:150px;padding:18px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:7px;
+}
+.detail-item b{font-family:"Cormorant Garamond",serif;font-size:2.2rem;color:#dfa03a}
+.detail-item span{font-size:.82rem;line-height:1.5}
+.detail-item small{display:none;font-size:.76rem;line-height:1.45;color:#75424f}
+.detail-item.revealed{background:#ffe1eb;border-color:#ef6f92;transform:translateY(-5px)}
+.detail-item.revealed span{display:none}
+.detail-item.revealed small{display:block;animation:enter .5s ease}
+.hold-button{
+  position:relative;overflow:hidden;min-width:min(300px,90vw);height:53px;padding:0;
+  touch-action:none;user-select:none;
+}
+.hold-button .hold-fill{
+  position:absolute;inset:0;width:0;background:linear-gradient(90deg,#c92e5c,#f78ba5);
+  transition:width .12s linear;
+}
+.hold-button.holding .hold-fill{width:100%;transition:width 1.7s linear}
+.hold-button .hold-text{position:relative;z-index:1;margin:0}
+.envelope-tip{
+  margin:0 0 20px;color:#a63c5c;font-size:.75rem;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;animation:tipPulse 1.4s ease-in-out infinite;
+}
+@keyframes tipPulse{50%{transform:translateY(-4px);opacity:.6}}
+.envelope:focus-visible,.secret-note:focus-visible,.detail-item:focus-visible{
+  outline:3px solid #fff;outline-offset:4px;
+}
+@media(max-width:620px){
+  .secret-notes{grid-template-columns:1fr;gap:9px}
+  .secret-note{min-height:82px}
+  .detail-item{min-height:96px}
+}
