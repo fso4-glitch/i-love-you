@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#170c19">
+  <meta name="description" content="Três meses de uma história que eu escolheria mil vezes.">
+  <title>3 meses de nós</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <header class="opening" id="opening">
+    <p class="eyebrow">uma surpresa pra minha princesa</p>
+    <div class="moon" aria-hidden="true"><span>3</span></div>
+    <h1>Três meses de uma história<br><em>q eu escolheria mil vezes</em></h1>
+    <p class="opening-copy">Eu preparei esse pequeno lugar pra guardar um pouco do q vc significa pra mim.</p>
+    <button class="main-button" id="startButton" type="button">
+      <span>Começar nossa história</span>
+      <b>→</b>
+    </button>
+    <p class="sound-note">Coloque o celular no volume e aproveite cada pedacinho ✦</p>
+  </header>
+
+  <main id="story" aria-hidden="true">
+    <nav class="progress-nav" aria-label="Progresso da história">
+      <span class="progress-label" id="progressLabel">Capítulo 1 de 4</span>
+      <div class="progress-line"><i id="progressBar"></i></div>
+    </nav>
+
+    <section class="chapter active" data-step="1">
+      <div class="chapter-number">01</div>
+      <div class="chapter-card">
+        <span class="small-title">Como td começou</span>
+        <h2>Algumas pessoas chegam devagar<br>e mudam <em>td</em></h2>
+        <p>Qnd a gente voltou a conversar, eu n imaginava q vc se tornaria uma parte tão importante da minha vida. Aos poucos, sem forçar nd, vc foi deixando meus dias mais bonitos só sendo exatamente qm vc é.</p>
+        <blockquote>“Entre tantas pessoas, foi em vc q eu encontrei algm q eu qro ter por perto em cada capítulo da minha vida.”</blockquote>
+      </div>
+      <button class="next-button" type="button">Continuar <span>→</span></button>
+    </section>
+
+    <section class="chapter" data-step="2">
+      <div class="chapter-number">02</div>
+      <div class="chapter-card">
+        <span class="small-title">Oq vc trouxe pra mim</span>
+        <h2>Vc virou minha paz<br>e meu <em>lugar favorito</em></h2>
+        <p>Eu amo nossas conversas, suas brincadeiras, seu jeitinho e até os detalhes q vc acha simples. Vc consegue fazer um dia comum se tornar especial e me faz sentir uma felicidade q eu nem sabia explicar antes d te conhecer assim.</p>
+        <div class="detail-grid">
+          <article><b>01</b><span>Seu jeitinho q me conquista td dia</span></article>
+          <article><b>02</b><span>A paz q eu sinto qnd tô cm vc</span></article>
+          <article><b>03</b><span>O futuro bonito q eu consigo imaginar</span></article>
+        </div>
+      </div>
+      <button class="next-button" type="button">Continuar <span>→</span></button>
+    </section>
+
+    <section class="chapter" data-step="3">
+      <div class="chapter-number">03</div>
+      <div class="chapter-card">
+        <span class="small-title">Três meses, três certezas</span>
+        <h2>É só o começo,<br>mas eu já sei <em>oq qro</em></h2>
+        <div class="certainties">
+          <button type="button"><span>1</span><p>Vc foi uma das melhores pessoas q chegaram na minha vida</p></button>
+          <button type="button"><span>2</span><p>Eu amo ter vc cmg e dividir meus dias cntg</p></button>
+          <button type="button"><span>3</span><p>Eu qro continuar construindo nossa história, sem pressa e sem fim</p></button>
+        </div>
+        <p class="tap-tip">Toque nas três certezas ✦</p>
+      </div>
+      <button class="next-button locked" type="button" disabled>Continuar <span>→</span></button>
+    </section>
+
+    <section class="chapter" data-step="4">
+      <div class="chapter-number">∞</div>
+      <div class="chapter-card future-card">
+        <span class="small-title">Td q ainda vem pela frente</span>
+        <h2>Eu n penso só nesses 3 meses.<br>Eu penso em <em>nós</em></h2>
+        <p>Eu penso nos encontros, nas viagens, nos sonhos realizados, no nosso cantinho, nas risadas em dias comuns e em tds as memórias q ainda vamos criar. Oq a gente viveu até aq é lindo, mas oq mais me emociona é saber q ainda existe tanta coisa esperando por nós.</p>
+        <div class="future-path" aria-hidden="true">
+          <i></i><span>agr</span><i></i><span>nossos sonhos</span><i></i><span>pra smp</span>
+        </div>
+      </div>
+      <button class="next-button final-trigger" type="button">Abrir minha carta <span>♡</span></button>
+    </section>
+
+    <section class="letter-scene" id="letterScene">
+      <div class="envelope" id="envelope" aria-hidden="true">
+        <div class="envelope-back"></div>
+        <div class="paper-peek">pra vc ♡</div>
+        <div class="envelope-front"></div>
+        <div class="seal">3</div>
+      </div>
+
+      <article class="letter" id="letter">
+        <p class="letter-date">Nosso terceiro mês</p>
+        <h2>Pra minha princesa</h2>
+        <p>Qnd a gente começou, eu n imaginava q em tão pouco tempo vc conseguiria se tornar algm tão importante pra mim. Vc chegou e trouxe paz pros meus dias, deixou meus momentos mais bonitos e me mostrou como é especial ter algm cm qm eu posso ser eu msm.</p>
+        <p>Eu amo seu jeitinho, amo nossas conversas e amo a forma q até as coisas mais simples ficam especiais qnd vêm de vc. Sou mt grato por ter encontrado uma menina tão incrível, carinhosa e única.</p>
+        <p>Esses 3 meses são só o começo d td q eu ainda qro viver cntg. Eu qro estar ao seu lado nos dias bons, cuidar d vc nos dias difíceis, realizar nossos sonhos e continuar encontrando novos motivos pra te amar cada vez mais.</p>
+        <p>Se eu pudesse voltar no tempo, eu escolheria viver td dnv, só pra ter a felicidade d encontrar vc outra vez.</p>
+        <strong>Feliz 3 meses, meu amor.<br>Eu amo vc dms ❤️</strong>
+        <span class="signature">Com td meu amor, Felipe</span>
+      </article>
+
+      <div class="final-message">
+        <span>3 meses</span>
+        <h2>e uma vida inteira<br>pra amar vc</h2>
+        <button id="replayButton" type="button">Ver nossa história dnv ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
