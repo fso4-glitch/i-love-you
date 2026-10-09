@@ -41,8 +41,14 @@
         <h2>Algumas pessoas chegam devagar<br>e mudam <em>td</em></h2>
         <p>Qnd a gente voltou a conversar, eu n imaginava q vc se tornaria uma parte tão importante da minha vida. Aos poucos, sem forçar nd, vc foi deixando meus dias mais bonitos só sendo exatamente qm vc é.</p>
         <blockquote>“Entre tantas pessoas, foi em vc q eu encontrei algm q eu qro ter por perto em cada capítulo da minha vida.”</blockquote>
+        <div class="secret-notes" aria-label="Três mensagens escondidas">
+          <button class="secret-note" type="button"><span>♡</span><b>Toque pra revelar</b><small>Vc mudou meus dias sem nem perceber.</small></button>
+          <button class="secret-note" type="button"><span>✦</span><b>Mais um pedacinho</b><small>Eu agradeço a Deus por ter colocado vc no meu caminho.</small></button>
+          <button class="secret-note" type="button"><span>♡</span><b>Uma certeza</b><small>Te escolher foi uma das coisas mais lindas q já fiz.</small></button>
+        </div>
+        <p class="tap-tip">Abra as três mensagens ✦</p>
       </div>
-      <button class="next-button" type="button">Continuar <span>→</span></button>
+      <button class="next-button locked" type="button" disabled>Continuar <span>→</span></button>
     </section>
 
     <section class="chapter" data-step="2">
@@ -52,12 +58,13 @@
         <h2>Vc virou minha paz<br>e meu <em>lugar favorito</em></h2>
         <p>Eu amo nossas conversas, suas brincadeiras, seu jeitinho e até os detalhes q vc acha simples. Vc consegue fazer um dia comum se tornar especial e me faz sentir uma felicidade q eu nem sabia explicar antes d te conhecer assim.</p>
         <div class="detail-grid">
-          <article><b>01</b><span>Seu jeitinho q me conquista td dia</span></article>
-          <article><b>02</b><span>A paz q eu sinto qnd tô cm vc</span></article>
-          <article><b>03</b><span>O futuro bonito q eu consigo imaginar</span></article>
+          <button class="detail-item" type="button"><b>01</b><span>Seu jeitinho q me conquista td dia</span><small>É impossível conhecer vc e n se encantar cada vez mais.</small></button>
+          <button class="detail-item" type="button"><b>02</b><span>A paz q eu sinto qnd tô cm vc</span><small>Até uma conversa simples cntg consegue deixar meu dia melhor.</small></button>
+          <button class="detail-item" type="button"><b>03</b><span>O futuro bonito q eu consigo imaginar</span><small>Qnd penso nos meus sonhos, é vc q aparece em cada um deles.</small></button>
         </div>
+        <p class="tap-tip">Toque nos três detalhes ✦</p>
       </div>
-      <button class="next-button" type="button">Continuar <span>→</span></button>
+      <button class="next-button locked" type="button" disabled>Continuar <span>→</span></button>
     </section>
 
     <section class="chapter" data-step="3">
@@ -85,11 +92,14 @@
           <i></i><span>agr</span><i></i><span>nossos sonhos</span><i></i><span>pra smp</span>
         </div>
       </div>
-      <button class="next-button final-trigger" type="button">Abrir minha carta <span>♡</span></button>
+      <button class="next-button final-trigger hold-button" type="button">
+        <i class="hold-fill"></i><span class="hold-text">Segure pra abrir minha carta ♡</span>
+      </button>
     </section>
 
     <section class="letter-scene" id="letterScene">
-      <div class="envelope" id="envelope" aria-hidden="true">
+      <p class="envelope-tip" id="envelopeTip">Toque no envelope pra abrir ✦</p>
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Abrir a carta">
         <div class="envelope-back"></div>
         <div class="paper-peek">pra vc ♡</div>
         <div class="envelope-front"></div>
