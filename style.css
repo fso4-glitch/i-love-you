@@ -181,7 +181,11 @@ blockquote{
 .certainties button p{margin:0;line-height:1.45}
 .certainties button.opened{background:#ffe1eb;border-color:#ef6f92;transform:translateX(4px)}
 .certainties button.opened span{background:#ed5f84;color:white;border-color:#fff}
-.tap-tip{font-size:.72rem!important;color:#a66d7d!important;margin:18px auto 0!important}
+.tap-tip{
+  font-size:.78rem!important;color:#a64060!important;margin:22px auto 14px!important;
+  padding:9px 15px;border-radius:999px;background:#ffe1eb;border:1px solid #ef91aa;
+  width:max-content;max-width:95%;font-weight:700;box-shadow:0 6px 15px #c84d7020
+}
 .future-path{position:relative;display:flex;align-items:center;justify-content:center;gap:9px;margin:34px auto 0;color:#9a6171;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
 .future-path i{width:36px;height:2px;background:#edb85d}
 .letter-scene{
