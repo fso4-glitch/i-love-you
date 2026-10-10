@@ -8,6 +8,43 @@ const envelope=document.getElementById('envelope');
 const letter=document.getElementById('letter');
 let step=0;
 let holdTimer=null;
+const loveCharacter=document.getElementById('loveCharacter');
+const loveCharacterImage=document.getElementById('loveCharacterImage');
+const characterBubble=document.getElementById('characterBubble');
+const characterImages=[
+  'assets/tom-angela-1.webp','assets/tom-angela-2.webp','assets/tom-angela-3.webp',
+  'assets/tom-angela-4.webp','assets/tom-angela-5.webp'
+];
+const characterMessages=[
+  'Um beijinho só pra vc ♡',
+  'Juntinhos fica td mais bonito ✦',
+  'Vem cá, minha princesa ♡',
+  'Vc é meu lugar favorito ✦',
+  'N tem como ficar brava cm esse jeitinho 🥺'
+];
+let characterIndex=0;
+let bubbleTimer=null;
+
+function setCharacter(index){
+  characterIndex=((index%characterImages.length)+characterImages.length)%characterImages.length;
+  loveCharacterImage.style.opacity='0';
+  setTimeout(function(){
+    loveCharacterImage.src=characterImages[characterIndex];
+    loveCharacterImage.style.opacity='1';
+  },180);
+}
+function reactCharacter(){
+  loveCharacter.classList.remove('reacting');
+  void loveCharacter.offsetWidth;
+  loveCharacter.classList.add('reacting');
+  characterBubble.textContent=characterMessages[characterIndex];
+  characterBubble.classList.add('show');
+  burst(16,loveCharacter);
+  clearTimeout(bubbleTimer);
+  bubbleTimer=setTimeout(function(){characterBubble.classList.remove('show')},2600);
+}
+loveCharacter.onclick=reactCharacter;
+loveCharacterImage.style.transition='opacity .18s';
 
 function createStars(){
   const sky=document.getElementById('stars');
@@ -34,6 +71,7 @@ function petal(){
 }
 function setStep(index){
   step=index;
+  setCharacter(index+1);
   chapters.forEach(function(chapter,i){chapter.classList.toggle('active',i===index)});
   progressLabel.textContent='Capítulo '+(index+1)+' de '+chapters.length;
   progressBar.style.width=((index+1)/chapters.length*100)+'%';
@@ -121,6 +159,7 @@ function openFinalScene(){
   chapters.forEach(function(chapter){chapter.classList.remove('active')});
   document.querySelector('.progress-nav').style.display='none';
   letterScene.classList.add('show');
+  setCharacter(2);
   burst(36,holdButton);
   window.scrollTo({top:0,behavior:'smooth'});
 }
