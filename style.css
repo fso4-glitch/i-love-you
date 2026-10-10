@@ -349,7 +349,7 @@ blockquote{
 /* Tom e Angela sempre presentes, como os ursinhos */
 .corner-characters{position:fixed;inset:0;z-index:24;pointer-events:none}
 .corner-character{
-  position:absolute;width:clamp(120px,16vw,195px);padding:0;border:0;cursor:pointer;
+  position:absolute;width:clamp(140px,18vw,225px);padding:0;border:0;cursor:pointer;
   background:transparent;filter:drop-shadow(0 10px 12px #9e345845);
   pointer-events:auto;transition:transform .25s;animation:cornerFloat 4s ease-in-out infinite;
 }
@@ -383,14 +383,14 @@ blockquote{
 @keyframes cornerFloat{50%{translate:0 -8px}}
 @keyframes cornerReact{35%{scale:1.17;rotate:-6deg}70%{scale:.95;rotate:5deg}}
 @media(max-width:620px){
-  .corner-character{width:128px}
+  .corner-character{width:150px}
   .corner-top-left,.corner-top-right{top:82px}
   .corner-bottom-left,.corner-bottom-right{bottom:3px}
-  .chapter{padding-inline:38px;padding-bottom:145px}
-  .letter-scene{padding-inline:36px;padding-bottom:145px}
+  .chapter{padding-inline:48px;padding-bottom:175px}
+  .letter-scene{padding-inline:46px;padding-bottom:175px}
 }
 @media(max-width:380px){
-  .corner-character{width:112px}
-  .corner-reaction{bottom:132px}
+  .corner-character{width:135px}
+  .corner-reaction{bottom:155px}
   .characters-tip{font-size:.7rem}
 }
