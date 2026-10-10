@@ -349,7 +349,7 @@ blockquote{
 /* Tom e Angela sempre presentes, como os ursinhos */
 .corner-characters{position:fixed;inset:0;z-index:24;pointer-events:none}
 .corner-character{
-  position:absolute;width:clamp(105px,14vw,175px);padding:0;border:0;cursor:pointer;
+  position:absolute;width:clamp(120px,16vw,195px);padding:0;border:0;cursor:pointer;
   background:transparent;filter:drop-shadow(0 10px 12px #9e345845);
   pointer-events:auto;transition:transform .25s;animation:cornerFloat 4s ease-in-out infinite;
 }
@@ -365,17 +365,32 @@ blockquote{
   color:#a53055;background:#fff4f8e8;box-shadow:0 8px 22px #a6466630;
   font-size:.72rem;font-weight:700;backdrop-filter:blur(7px);
 }
-.characters-tip{top:74px;transition:opacity .5s}
+.characters-tip{
+  top:74px;padding:11px 18px;font-size:.8rem;color:#fff;
+  background:linear-gradient(135deg,#ee5f87eF,#c93662ef);
+  box-shadow:0 10px 26px #a92f554f,0 0 0 5px #ffffff50;
+  animation:tipAttention 1.4s ease-in-out infinite;transition:opacity .5s
+}
 .characters-tip.hide{opacity:0;pointer-events:none}
-.corner-reaction{bottom:22px;opacity:0;transform:translateY(10px);transition:.3s;pointer-events:none}
-.corner-reaction.show{opacity:1;transform:translateY(0)}
+.corner-reaction{
+  bottom:150px;padding:12px 19px;font-size:.86rem;color:#fff;
+  background:linear-gradient(135deg,#ee5f87f2,#c93662f2);
+  box-shadow:0 10px 28px #a92f5555,0 0 0 5px #ffffff50;
+  opacity:0;transform:translateY(10px) scale(.92);transition:.3s;pointer-events:none
+}
+.corner-reaction.show{opacity:1;transform:translateY(0) scale(1)}
+@keyframes tipAttention{50%{transform:scale(1.05);box-shadow:0 13px 32px #a92f5566,0 0 0 7px #ffffff62}}
 @keyframes cornerFloat{50%{translate:0 -8px}}
 @keyframes cornerReact{35%{scale:1.17;rotate:-6deg}70%{scale:.95;rotate:5deg}}
 @media(max-width:620px){
-  .corner-character{width:112px}
+  .corner-character{width:128px}
   .corner-top-left,.corner-top-right{top:82px}
   .corner-bottom-left,.corner-bottom-right{bottom:3px}
   .chapter{padding-inline:38px;padding-bottom:145px}
   .letter-scene{padding-inline:36px;padding-bottom:145px}
 }
-@media(max-width:380px){.corner-character{width:96px}}
+@media(max-width:380px){
+  .corner-character{width:112px}
+  .corner-reaction{bottom:132px}
+  .characters-tip{font-size:.7rem}
+}
