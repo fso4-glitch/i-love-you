@@ -398,3 +398,32 @@ blockquote{
   .corner-reaction{bottom:148px}
   .characters-tip{font-size:.7rem}
 }
+
+
+/* Vídeo especial do casal */
+.love-video-card{
+  position:relative;max-width:520px;margin:32px auto 6px;padding:18px;
+  border:2px solid #fff;border-radius:28px;background:linear-gradient(145deg,#fff7fa,#ffe3ed);
+  box-shadow:0 15px 35px #bd4a6e2e;
+}
+.love-video-card::before{
+  content:"♡";position:absolute;right:18px;top:10px;color:#ed6289;font-size:1.5rem;
+  animation:float 3s ease-in-out infinite
+}
+.video-kicker{
+  display:block;margin-bottom:4px;color:#bf3a61;font-size:.64rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase
+}
+.love-video-card h3{
+  margin:0 30px 14px;font-family:"Cormorant Garamond",serif;
+  color:#843d52;font-size:clamp(1.35rem,4vw,1.8rem)
+}
+.love-video-card video{
+  display:block;width:100%;max-height:58vh;border:3px solid #fff;border-radius:20px;
+  background:#d88aa2;box-shadow:0 10px 25px #a23b5a35
+}
+.love-video-card small{display:block;margin-top:10px;color:#a65068;font-size:.7rem;font-weight:700}
+@media(max-width:620px){
+  .love-video-card{padding:12px;border-radius:23px}
+  .love-video-card video{border-radius:16px}
+}
