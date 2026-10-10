@@ -343,3 +343,32 @@ blockquote{
   .dream-capsules{grid-template-columns:1fr;gap:9px}
   .dream-capsule,.dream-capsule.santorini{grid-column:auto;min-height:95px}
 }
+
+
+/* Tom e Angela acompanhando a história */
+.love-character{
+  position:fixed;right:18px;bottom:15px;z-index:28;width:clamp(135px,18vw,210px);
+  padding:0;border:3px solid #fff;border-radius:30px;overflow:visible;cursor:pointer;
+  background:#ffdce8;box-shadow:0 16px 35px #9f355b45;
+  transform:rotate(2deg);transition:transform .3s,opacity .4s;
+  animation:characterFloat 3.8s ease-in-out infinite;
+}
+.love-character img{
+  display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:27px;
+}
+.love-character span{
+  position:absolute;right:4px;bottom:calc(100% + 9px);width:max-content;max-width:190px;
+  padding:9px 13px;border:2px solid #fff;border-radius:16px;color:#a62f55;
+  background:#fff4f8;box-shadow:0 8px 20px #a6466628;font-size:.72rem;font-weight:700;
+  opacity:0;transform:translateY(8px) scale(.9);transition:.3s;pointer-events:none;
+}
+.love-character span.show{opacity:1;transform:translateY(0) scale(1)}
+.love-character.reacting{animation:characterReact .65s ease}
+@keyframes characterFloat{50%{transform:translateY(-9px) rotate(-2deg)}}
+@keyframes characterReact{35%{transform:scale(1.12) rotate(-5deg)}70%{transform:scale(.96) rotate(4deg)}}
+@media(max-width:620px){
+  .love-character{width:145px;right:8px;bottom:9px;border-radius:25px}
+  .love-character img{border-radius:22px}
+  .chapter{padding-bottom:175px}
+  .letter-scene{padding-bottom:175px}
+}
