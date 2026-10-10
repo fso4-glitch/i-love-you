@@ -401,29 +401,16 @@ blockquote{
 
 
 
-/* Balão flutuante com Tom e Angela dançando */
-.dance-bubble{
-  position:fixed;right:12px;top:50%;z-index:23;width:clamp(100px,12vw,145px);
-  aspect-ratio:1;border:4px solid #fff;border-radius:50%;overflow:visible;
-  background:transparent;box-shadow:0 14px 32px #9e345838;
-  animation:danceBubble 3.2s ease-in-out infinite;
+
+/* Tom e Angela dançando, soltos na tela igual às fotos */
+.dancing-characters{
+  position:fixed;right:6px;top:47%;z-index:23;width:clamp(140px,17vw,215px);
+  pointer-events:none;filter:drop-shadow(0 12px 14px #9e345845);
+  animation:dancingFloat 3.2s ease-in-out infinite;
 }
-.dance-bubble::after{
-  content:"";position:absolute;right:5px;bottom:-8px;width:25px;height:25px;
-  background:#fff;border-radius:2px 2px 20px 2px;transform:rotate(28deg);z-index:-1
-}
-.dance-bubble img{
-  display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;
-  pointer-events:none
-}
-.dance-bubble span{
-  position:absolute;left:50%;top:calc(100% + 11px);translate:-50% 0;
-  width:max-content;padding:7px 11px;border:2px solid #fff;border-radius:999px;
-  color:#a53255;background:#fff4f8e8;font-size:.62rem;font-weight:700;
-  box-shadow:0 7px 18px #a6466628
-}
-@keyframes danceBubble{50%{transform:translateY(-10px) rotate(2deg)}}
+.dancing-characters img{display:block;width:100%;height:auto}
+@keyframes dancingFloat{50%{transform:translateY(-10px) rotate(2deg)}}
 @media(max-width:620px){
-  .dance-bubble{width:105px;right:6px;top:44%}
-  .dance-bubble span{font-size:.56rem}
+  .dancing-characters{width:142px;right:2px;top:43%}
 }
+@media(max-width:380px){.dancing-characters{width:128px}}
