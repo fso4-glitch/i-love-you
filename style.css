@@ -358,8 +358,8 @@ blockquote{
   pointer-events:auto;transition:transform .25s;animation:cornerFloat 4s ease-in-out infinite;
 }
 .corner-character img{display:block;width:100%;height:auto}
-.corner-top-left{top:45px;left:4px;transform-origin:left top}
-.corner-top-right{top:45px;right:4px;transform-origin:right top;animation-delay:-1s}
+.corner-top-left{top:20px;left:4px;transform-origin:left top}
+.corner-top-right{top:20px;right:4px;transform-origin:right top;animation-delay:-1s}
 .corner-bottom-left{bottom:5px;left:4px;transform-origin:left bottom;animation-delay:-2s}
 .corner-bottom-right{bottom:5px;right:4px;transform-origin:right bottom;animation-delay:-3s}
 .corner-character.reacting{animation:cornerReact .65s ease}
@@ -388,7 +388,7 @@ blockquote{
 @keyframes cornerReact{35%{scale:1.17;rotate:-6deg}70%{scale:.95;rotate:5deg}}
 @media(max-width:620px){
   .corner-character{width:142px}
-  .corner-top-left,.corner-top-right{top:55px}
+  .corner-top-left,.corner-top-right{top:28px}
   .corner-bottom-left,.corner-bottom-right{bottom:3px}
   .chapter{padding-inline:48px;padding-bottom:175px}
   .letter-scene{padding-inline:46px;padding-bottom:175px}
