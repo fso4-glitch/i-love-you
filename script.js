@@ -157,10 +157,6 @@ function openEnvelope(){
 }
 envelope.addEventListener('click',openEnvelope);
 envelope.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')openEnvelope()});
-const loveVideo=document.getElementById('loveVideo');
-loveVideo.addEventListener('play',function(){
-  burst(24,loveVideo);
-});
 document.getElementById('replayButton').onclick=function(){location.reload()};
 createStars();
 setInterval(petal,650);
