@@ -424,3 +424,17 @@ blockquote{
   .dancing-characters{width:158px;right:2px;top:43%}
 }
 @media(max-width:380px){.dancing-characters{width:145px}}
+
+
+/* Ajustes de desempenho para celulares */
+@media(max-width:620px){
+  .grain{display:none}
+  .characters-tip,.corner-reaction{backdrop-filter:none}
+  .corner-character{filter:drop-shadow(0 5px 6px #9e345830);animation-duration:5.5s}
+  .dancing-characters{filter:drop-shadow(0 5px 6px #9e34582b);animation-duration:4.5s}
+  .star{box-shadow:0 0 6px #fff}
+  .petal{filter:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .corner-character,.dancing-characters,.star{animation-duration:8s}
+}

@@ -8,6 +8,7 @@ const envelope=document.getElementById('envelope');
 const letter=document.getElementById('letter');
 let step=0;
 let holdTimer=null;
+const compactEffects=window.matchMedia('(max-width:620px)').matches;
 const cornerCharacters=[...document.querySelectorAll('.corner-character')];
 const cornerReaction=document.getElementById('cornerReaction');
 let cornerReactionTimer=null;
@@ -27,7 +28,7 @@ setTimeout(function(){document.getElementById('charactersTip').classList.add('hi
 
 function createStars(){
   const sky=document.getElementById('stars');
-  for(let i=0;i<90;i++){
+  for(let i=0;i<(compactEffects?32:70);i++){
     const star=document.createElement('i');
     star.className='star';
     star.style.left=Math.random()*100+'%';
@@ -73,6 +74,7 @@ function unlockNext(chapterIndex,selector,activeClass){
   });
 }
 function burst(total,origin){
+  if(compactEffects)total=Math.min(total,12);
   const rect=origin?origin.getBoundingClientRect():null;
   for(let i=0;i<total;i++){
     setTimeout(function(){
@@ -159,4 +161,4 @@ envelope.addEventListener('click',openEnvelope);
 envelope.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')openEnvelope()});
 document.getElementById('replayButton').onclick=function(){location.reload()};
 createStars();
-setInterval(petal,650);
+setInterval(petal,compactEffects?1200:780);
