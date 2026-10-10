@@ -404,13 +404,13 @@ blockquote{
 
 /* Tom e Angela dançando, soltos na tela igual às fotos */
 .dancing-characters{
-  position:fixed;right:6px;top:47%;z-index:23;width:clamp(140px,17vw,215px);
+  position:fixed;right:6px;top:47%;z-index:23;width:clamp(152px,18.5vw,230px);
   pointer-events:none;filter:drop-shadow(0 12px 14px #9e345845);
   animation:dancingFloat 3.2s ease-in-out infinite;
 }
 .dancing-characters img{display:block;width:100%;height:auto}
 @keyframes dancingFloat{50%{transform:translateY(-10px) rotate(2deg)}}
 @media(max-width:620px){
-  .dancing-characters{width:142px;right:2px;top:43%}
+  .dancing-characters{width:158px;right:2px;top:43%}
 }
-@media(max-width:380px){.dancing-characters{width:128px}}
+@media(max-width:380px){.dancing-characters{width:145px}}
