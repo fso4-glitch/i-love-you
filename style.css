@@ -358,10 +358,10 @@ blockquote{
   pointer-events:auto;transition:transform .25s;animation:cornerFloat 4s ease-in-out infinite;
 }
 .corner-character img{display:block;width:100%;height:auto}
-.corner-top-left{top:70px;left:4px;transform-origin:left top}
-.corner-top-right{top:70px;right:4px;transform-origin:right top;animation-delay:-1s}
-.corner-bottom-left{bottom:32px;left:4px;transform-origin:left bottom;animation-delay:-2s}
-.corner-bottom-right{bottom:32px;right:4px;transform-origin:right bottom;animation-delay:-3s}
+.corner-top-left{top:45px;left:4px;transform-origin:left top}
+.corner-top-right{top:45px;right:4px;transform-origin:right top;animation-delay:-1s}
+.corner-bottom-left{bottom:5px;left:4px;transform-origin:left bottom;animation-delay:-2s}
+.corner-bottom-right{bottom:5px;right:4px;transform-origin:right bottom;animation-delay:-3s}
 .corner-character.reacting{animation:cornerReact .65s ease}
 .characters-tip,.corner-reaction{
   position:fixed;left:50%;z-index:29;translate:-50% 0;width:max-content;max-width:82vw;
@@ -388,8 +388,8 @@ blockquote{
 @keyframes cornerReact{35%{scale:1.17;rotate:-6deg}70%{scale:.95;rotate:5deg}}
 @media(max-width:620px){
   .corner-character{width:142px}
-  .corner-top-left,.corner-top-right{top:82px}
-  .corner-bottom-left,.corner-bottom-right{bottom:38px}
+  .corner-top-left,.corner-top-right{top:55px}
+  .corner-bottom-left,.corner-bottom-right{bottom:3px}
   .chapter{padding-inline:48px;padding-bottom:175px}
   .letter-scene{padding-inline:46px;padding-bottom:175px}
 }
