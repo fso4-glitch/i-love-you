@@ -230,6 +230,16 @@ blockquote{
 .letter.show{display:block;animation:letterIn 1s ease both}
 @keyframes letterIn{from{opacity:0;transform:translateY(40px) rotate(.8deg)}}
 .letter h2{position:relative;font-size:clamp(2.8rem,8vw,5rem);margin:0 0 26px;color:#c53a61}
+.letter-photo{
+  position:relative;margin:0 auto 30px;padding:10px 10px 14px;max-width:480px;
+  background:#fff;border:2px solid #ffd0dd;border-radius:22px;
+  box-shadow:0 14px 32px #a83d5a2e;transform:rotate(-.6deg)
+}
+.letter-photo img{display:block;width:100%;height:auto;border-radius:14px;object-fit:cover}
+.letter-photo figcaption{
+  margin-top:10px;text-align:center;color:#b13b60;font-family:"Cormorant Garamond",serif;
+  font-size:1.25rem;font-weight:700;font-style:italic
+}
 .letter p{position:relative;font-family:"Cormorant Garamond",serif;font-size:clamp(1.15rem,3vw,1.4rem);line-height:1.72;margin:0 0 18px}
 .letter strong{position:relative;display:block;margin-top:32px;font-family:"Cormorant Garamond",serif;font-size:1.8rem;line-height:1.35;color:#ca3b63}
 .signature{position:relative;display:block;margin-top:25px;color:#96616c;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem}
